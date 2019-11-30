@@ -63,7 +63,7 @@ export const ZIndex = {
 // ***********************************
 
 export const BoxShadow = {
-  defaultBox: `0 3px 2px rgba(0, 0, 0, 0.2)`,
+  defaultBox: `0 0 20px rgba(0, 0, 0, 0.1);`,
   boxTransformation: `0 12px 16px rgba(0, 0, 0, 0.2)`,
 };
 

@@ -1,37 +1,39 @@
 import styled from 'styled-components';
 
+import * as V from '../../Styles/variables';
+
 export const Container = styled.div`
   max-width: 700px;
-  background: #fff;
+  background: ${V.Colors.whiteSolid};
   border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: ${V.BoxShadow.defaultBox};
   padding: 30px;
-  margin: 80px auto;
+  margin: 20px auto;
 
   h1 {
     font-size: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 20px;
   }
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
 
     input {
-      background: rgba(0, 0, 0, 0.2);
-      border: 0;
+      background: ${V.Colors.white};
+      border: 2px solid ${V.Colors.lightBlue};
       border-radius: 4px;
       height: 50px;
       padding: 0 15px;
       margin: 0 0 15px;
       width: 100%;
-      color: #ffffff;
+      color: ${V.Colors.lightBlue};
       font-size: 18px;
       line-height: 21px;
       &::placeholder {
-        color: rgba(255, 255, 255, 0.5);
+        color: ${V.Colors.lightBlue};
       }
     }
   }
@@ -69,7 +71,6 @@ export const List = styled.ul`
     }
     a {
       color: #f94d6a;
-      text-decoration: none;
     }
   }
 `;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import { toast } from 'react-toastify';
 
 import { omdbapi } from '../../services/api';
 
@@ -14,12 +15,17 @@ export default function Search() {
     setLoading(true);
 
     try {
+      if (movie === '') throw new Error('Search need some value');
+
       const response = await omdbapi.get(`&s=${movie}`);
+
+      if (response.data.Response === 'False')
+        throw new Error('There are no movies that matched your search.');
 
       setMovies(response.data.Search);
       setLoading(false);
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      toast.error(err.message);
     } finally {
       setLoading(false);
     }
@@ -28,6 +34,7 @@ export default function Search() {
   return (
     <S.Container>
       <Form onSubmit={handleSubmit}>
+        <h1>Search for a Movie, tv show</h1>
         <Input type="text" name="movie" placeholder="Titanic..." />
 
         <button type="submit">{loading ? 'Carregando...' : 'Procurar'}</button>
