@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as S from './styles';
 
@@ -16,6 +17,11 @@ export default function MovieCard({ data }) {
         <div>
           <p>{data.overview}</p>
         </div>
+        <footer>
+          <Link to={`/movies/${encodeURIComponent(data.title)}`}>
+            Mais detalhes
+          </Link>
+        </footer>
       </S.Details>
     </S.Container>
   );

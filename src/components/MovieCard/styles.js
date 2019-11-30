@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 import * as V from '../../Styles/variables';
 import * as T from '../../Styles/typography';
@@ -6,11 +7,15 @@ import * as T from '../../Styles/typography';
 export const Container = styled.div`
   box-shadow: ${V.BoxShadow.defaultBox};
   border-radius: 4px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  max-width: 600px;
-  max-height: 300px;
-  min-height: 300px;
+  display: flex;
+  height: 300px;
+  min-width: 100%;
+
+  ${media.lessThan('medium')`;
+    margin: 10px;
+    min-width: 100%;
+    max-height: 250px;
+  `}
 `;
 
 export const Details = styled.div`
@@ -19,6 +24,7 @@ export const Details = styled.div`
   > header {
     width: 100%;
     margin-bottom: 20px;
+    min-height: 70px;
 
     h1 {
       ${T.Heading3};
@@ -32,7 +38,7 @@ export const Details = styled.div`
 
   > div {
     ${T.Text2}
-    min-height: 70%;
+    height: 55%;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -41,13 +47,36 @@ export const Details = styled.div`
   }
 
   > footer {
-    border-top: 1px solid #999;
-    padding: 10px 0px;
+    min-height: 30px;
     color: ${V.Colors.brightRed};
   }
+
+  ${media.lessThan('medium')`
+    > header {
+      margin-bottom: 10px;
+      min-height: 40px;
+    }
+
+    > div {
+      height: 60%;
+    }
+
+    > footer {
+      min-height: 20px;
+      color: ${V.Colors.brightRed};
+    }
+  `};
 `;
 
 export const Poster = styled.img`
   border-radius: 4px 0 0 4px;
-  min-height: 100%;
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+
+  ${media.lessThan('medium')`;
+    width: auto;
+    width: 150px;
+    max-height: 100%;
+  `}
 `;

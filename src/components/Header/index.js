@@ -11,8 +11,7 @@ export default function Header() {
           <a href="/">Testes</a>
         </S.Title>
         <S.Menu>
-          <Link to="discover" />
-          <p>Discover</p>
+          <Link to="discover">Lançamentos</Link>
         </S.Menu>
       </S.Container>
     </S.Header>

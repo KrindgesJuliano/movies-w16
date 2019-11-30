@@ -49,21 +49,21 @@ export const Heading2 = `
 
 export const Heading3 = `
   color: var(--primaryColor);
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: -0.04px;
   line-height: 1em;
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 `;
 
 export const Heading4 = `
   color: var(--primaryColor);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: -0.04px;
-  line-height: 1.2em;
+  line-height: 1.2rem;
 `;
 
 export const Text1 = `
