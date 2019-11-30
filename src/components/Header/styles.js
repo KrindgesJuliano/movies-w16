@@ -23,11 +23,6 @@ export const Container = styled.div`
   align-items: center;
   align-content: center;
   height: 60px;
-
-  ${media.greaterThan('large')`
-    max-width: 1330px;
-    margin: 0 auto;
-  `}
 `;
 
 export const Title = styled.div`

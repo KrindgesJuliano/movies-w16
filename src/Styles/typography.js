@@ -27,12 +27,12 @@ export const Subtitle2 = `
 
 export const Heading1 = `
   color: var(--primaryColor);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.022em;
   line-height: 1.3em;
   @media (min-width: 768px) {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 `;
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { tmdapi, apiKey } from '../../services/api';
 
 import MovieCard from '../../components/MovieCard';
+import Container from '../../components/Container';
 
 import * as S from './styles';
 
@@ -19,13 +20,15 @@ export default function Discover() {
   }, []);
 
   return (
-    <S.Container>
-      <h1>Proximos Lançamentos</h1>
-      <S.List>
-        {movies.map(movie => (
-          <MovieCard key={movie.title} data={movie} />
-        ))}
-      </S.List>
-    </S.Container>
+    <Container>
+      <S.Container>
+        <h1>Proximos Lançamentos</h1>
+        <S.List>
+          {movies.map(movie => (
+            <MovieCard key={movie.title} data={movie} />
+          ))}
+        </S.List>
+      </S.Container>
+    </Container>
   );
 }

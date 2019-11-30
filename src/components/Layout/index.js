@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <S.Wrapper>
       <Header />
-      <S.Container>{children}</S.Container>
+      {children}
     </S.Wrapper>
   );
 }
