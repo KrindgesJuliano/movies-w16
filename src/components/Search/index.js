@@ -28,7 +28,7 @@ export default function Search() {
   return (
     <S.Container>
       <Form onSubmit={handleSubmit}>
-        <Input type="text" name="movie" placeholder="Titanic" />
+        <Input type="text" name="movie" placeholder="Titanic..." />
 
         <button type="submit">{loading ? 'Carregando...' : 'Procurar'}</button>
 

@@ -1,7 +1,14 @@
 import React from 'react';
 
-import { Wrapper } from './styles';
+import Header from '../Header';
+
+import * as S from './styles';
 
 export default function Layout({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <S.Wrapper>
+      <Header />
+      <S.Container>{children}</S.Container>
+    </S.Wrapper>
+  );
 }
