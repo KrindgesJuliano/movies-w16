@@ -19,11 +19,12 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
   body, input, button {
-    font: 14px 'Roboto', sans-serif;
+    font: 16px 'Montserrat', sans-serif;
   }
-  a{
-    text-decoration: none;
-  }
+  a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
   ul{
     list-style: none;
   }
