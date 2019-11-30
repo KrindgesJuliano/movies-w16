@@ -27,43 +27,43 @@ export const Subtitle2 = `
 
 export const Heading1 = `
   color: var(--primaryColor);
-  font-size: 2.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.022em;
   line-height: 1.3em;
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 `;
 
 export const Heading2 = `
   color: var(--primaryColor);
-  font-size: 2.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.04px;
   line-height: 1.5em;
   @media (min-width: 768px) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `;
 
 export const Heading3 = `
   color: var(--primaryColor);
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: -0.04px;
-  line-height: 1.5em;
+  line-height: 1em;
   @media (min-width: 768px) {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
   }
 `;
 
 export const Heading4 = `
   color: var(--primaryColor);
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: -0.04px;
-  line-height: 1.5em;
+  line-height: 1.2em;
 `;
 
 export const Text1 = `
@@ -74,10 +74,10 @@ export const Text1 = `
 `;
 
 export const Text2 = `
-  font-size: 1.6rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: -0.14px;
-  line-height: 1.55em;
+  line-height: 1.2em;
 `;
 
 export const LinkTransition = `

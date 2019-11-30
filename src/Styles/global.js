@@ -31,4 +31,9 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
 `;
