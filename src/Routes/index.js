@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import Route from './Route';
 
-import Main from './Pages/Main';
-import Movies from './Pages/Movies';
-import Discover from './Pages/Discover';
+import Main from '../Pages/Main';
+import Movies from '../Pages/Movies';
+import Discover from '../Pages/Discover';
 
 // import { Container } from './styles';
 
