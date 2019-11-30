@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 
-import api from '../../services/api';
+import { omdbapi } from '../../services/api';
 
 import * as S from './styles';
 
@@ -14,7 +14,7 @@ export default function Search() {
     setLoading(true);
 
     try {
-      const response = await api.get(`&s=${movie}`);
+      const response = await omdbapi.get(`&s=${movie}`);
 
       setMovies(response.data.Search);
       setLoading(false);
