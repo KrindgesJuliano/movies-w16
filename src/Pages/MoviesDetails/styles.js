@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
   min-width: 100%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 
   img {
     padding: 30px;
@@ -58,7 +59,7 @@ export const Details = styled.div`
 
 export const About = styled.div`
   margin-top: 20px;
-  min-height: 300px;
+  min-height: 60%;
   position: relative;
 
   h1 {
@@ -87,5 +88,16 @@ export const About = styled.div`
 `;
 
 export const Awards = styled.h2`
-  margin-top: 30px;
+  margin: 30px 0;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const MoreInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const Box = styled.div`
+  margin: 20px;
 `;
