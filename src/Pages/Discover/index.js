@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { tmdapi, apiKey } from '../../services/api';
+import { api, apiKey } from '../../services/tmdbAPI';
 
 import MovieCard from '../../components/MovieCard';
 import Container from '../../components/Container';
@@ -12,7 +12,7 @@ export default function Discover() {
 
   useEffect(() => {
     async function loadMovies() {
-      const response = await tmdapi.get(`movie/upcoming?${apiKey}`);
+      const response = await api.get(`movie/upcoming?api_key=${apiKey}`);
 
       setMovies(response.data.results);
     }

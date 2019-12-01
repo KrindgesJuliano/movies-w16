@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import { toast } from 'react-toastify';
 
-import { omdbapi } from '../../services/api';
+import api from '../../services/api';
 
 import * as S from './styles';
 
@@ -17,7 +17,7 @@ export default function Search() {
     try {
       if (movie === '') throw new Error('Search need some value');
 
-      const response = await omdbapi.get(`&s=${movie}`);
+      const response = await api.get(`&s=${movie}`);
 
       if (response.data.Response === 'False')
         throw new Error('There are no movies that matched your search.');

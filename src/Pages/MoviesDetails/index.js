@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { omdbapi } from '../../services/api';
+import api from '../../services/api';
 
 import Container from '../../components/Container';
 
@@ -13,7 +13,7 @@ export default function MoviesDetails() {
 
   useEffect(() => {
     async function loadInfo() {
-      const response = await omdbapi.get(`&t=${name}&plot=full`);
+      const response = await api.get(`&t=${name}&plot=full`);
       console.log(response.data);
       setMovieInfo(response.data);
     }

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { imgURL } from '../../services/tmdbAPI';
+
 import * as S from './styles';
 
 export default function MovieCard({ data }) {
   return (
     <S.Container>
-      <S.Poster
-        src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${data.poster_path}`}
-      />
+      <S.Poster src={`${imgURL}${data.poster_path}`} />
       <S.Details>
         <header>
           <h1>{data.title}</h1>
