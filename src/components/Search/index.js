@@ -4,6 +4,7 @@ import { Form, Input } from '@rocketseat/unform';
 import { toast } from 'react-toastify';
 
 import api from '../../services/api';
+import Container from '../Container';
 
 import * as S from './styles';
 
@@ -32,24 +33,28 @@ export default function Search() {
   }
 
   return (
-    <S.Container>
-      <Form onSubmit={handleSubmit}>
-        <h1>Search for a Movie, tv show</h1>
-        <Input type="text" name="movie" placeholder="Titanic..." />
+    <Container>
+      <S.Container>
+        <Form onSubmit={handleSubmit}>
+          <h1>Search for a Movie, tv show</h1>
+          <Input type="text" name="movie" placeholder="Titanic..." />
 
-        <button type="submit">{loading ? 'Carregando...' : 'Procurar'}</button>
+          <button type="submit">
+            {loading ? 'Carregando...' : 'Procurar'}
+          </button>
 
-        <S.List>
-          {movies.map(movie => (
-            <li key={movie.imdbID}>
-              <span>{movie.Title}</span>
-              <Link to={`/movies/${encodeURIComponent(movie.Title)}`}>
-                Detalhes
-              </Link>
-            </li>
-          ))}
-        </S.List>
-      </Form>
-    </S.Container>
+          <S.List>
+            {movies.map(movie => (
+              <li key={movie.imdbID}>
+                <span>{movie.Title}</span>
+                <Link to={`/movies/${encodeURIComponent(movie.Title)}`}>
+                  Detalhes
+                </Link>
+              </li>
+            ))}
+          </S.List>
+        </Form>
+      </S.Container>
+    </Container>
   );
 }

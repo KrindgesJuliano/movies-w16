@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import * as V from '../../Styles/variables';
 
 export const Container = styled.div`
-  max-width: 700px;
   background: ${V.Colors.whiteSolid};
   border-radius: 4px;
   box-shadow: ${V.BoxShadow.defaultBox};
